@@ -3,10 +3,13 @@
 namespace Elastico\Eloquent\Relations;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
+use Elastico\Eloquent\Relations\Concerns\SizesResults;
 use Illuminate\Database\Eloquent\Relations\MorphMany as EloquentMorphMany;
 
 class MorphMany extends EloquentMorphMany implements ElasticRelation
 {
+    use SizesResults;
+
     /**
      * Get the name of the "where in" method for eager loading.
      *

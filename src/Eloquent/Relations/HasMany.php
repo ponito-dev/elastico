@@ -12,6 +12,7 @@ use Elastico\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Elastico\Eloquent\Relations\Concerns\MatchesAttributes;
+use Elastico\Eloquent\Relations\Concerns\SizesResults;
 use Elastico\Eloquent\Relations\Concerns\BuildsDictionnaries;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\Relations\HasMany as EloquentHasMany;
@@ -19,6 +20,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany as EloquentHasMany;
 class HasMany extends EloquentHasMany implements ElasticRelation
 {
     use MatchesAttributes;
+    use SizesResults;
     use BuildsDictionnaries;
 
     public function one()
